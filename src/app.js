@@ -29,8 +29,6 @@ app.get('', (req, res) => {
         name: 'Harsh'
     })
 })
-
-
 /////////////////////////////////// About /////////////
 app.get('/about', (req, res) => {
     res.render('about', {
@@ -38,9 +36,6 @@ app.get('/about', (req, res) => {
         name: 'Harsh'
     })
 })
-
-
-
 //////////////////////////////////// Help //////////////
 app.get('/help', (req, res) => {
     res.render('help', {
@@ -49,15 +44,6 @@ app.get('/help', (req, res) => {
         name: 'Harsh'
     })
 })
-
-//////////////////////////////////// 404 //////////////
-// app.get('*', (req, res) => {
-//     res.render('404', {
-//         errorMessage: 'NO Such Page Found !',
-//         title: '404',
-//         name: 'Harsh'
-//     })
-// })
 //////////////////////////////////// Weather ////////////
 app.get('/weather', (req, res) => {
     if(!req.query.address) {
@@ -80,22 +66,7 @@ app.get('/weather', (req, res) => {
         })
     })
 })
-
-// app.get('/products', (req, res) => {
-//     if(!req.query.search) {
-//         return res.send ({
-//             error: 'Please enter address'
-//         })
-//     }
-//     console.log(req.query.search)
-//     res.send({
-//         products: []
-//     })
-// })
-
-
-
-
+//////////////////////////////// Hosting at a Port /////
 app.listen(port, () => {
     console.log('Server is up on port ' + port)
 })
