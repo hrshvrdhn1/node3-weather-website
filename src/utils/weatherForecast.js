@@ -20,9 +20,13 @@ const forecast =(lon, lat, callback) => {
             callback('', body.current.weather_descriptions[0]
                 + '. It is currently '
                 + (body.current.temperature)
-                + ' degree celcius but it feels like '
+                + ' degree celcius and it feels like '
                 + (body.current.feelslike)
-                + ' degree celcius .'
+                + ' degree celcius '
+                + ', the Humidity in the atmosphere is : '
+                + (body.current.humidity)
+                + ' & Final Precipitation rate is : '
+                + (body.current.precip)
             )
         }    
     })
